@@ -6,17 +6,17 @@ Minimal source bundle for public verification of the on-chain program.
 - Program ID: `B1osUCap5eJ2iJnbRqfCQB87orhJM5EqZqPcGMbjJvXz`
 
 ## Toolchain
-- Anchor: **0.31.1** (must use this exact version)
+- Anchor: **0.32.1** (must use this exact version)
 - Solana program crate: 2.3.0
 - Rust edition: 2021
 
 ## Build Instructions
 
-**IMPORTANT:** To build the contract, you must use Anchor version **0.31.1** with the verification flag.
+**IMPORTANT:** To build the contract, you must use Anchor version **0.32.1** with the verification flag.
 
 ```bash
-# Verify that Anchor 0.31.1 is being used
-anchor --version  # should output 0.31.1
+# Verify that Anchor 0.32.1 is being used
+anchor --version  # should output 0.32.1
 
 # Build with verification flag
 anchor build --verifiable
