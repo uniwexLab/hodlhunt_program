@@ -4,7 +4,8 @@ members = [
 ]
 resolver = "2"
 
-[patch.crates-io]
+# Fix dependency versions to prevent incompatible updates
+# Note: blake3 and constant_time_eq versions are fixed in Cargo.lock manually
 
 [profile.release]
 overflow-checks = true
