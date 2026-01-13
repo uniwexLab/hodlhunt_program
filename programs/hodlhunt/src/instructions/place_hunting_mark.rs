@@ -4,6 +4,7 @@ use crate::Fish;
 use crate::{events::*, instructions::PlaceHuntingMark, utils::*};
 use anchor_lang::prelude::*;
 use anchor_lang::solana_program as spl_prog;
+use solana_program::native_token;
 
 /// Charges a hunter for placing an exclusive hunting mark on a prey fish within the
 /// permitted hunger window. Verifies mark limits, exclusivity, and hunter ownership
@@ -46,7 +47,7 @@ pub fn handle(ctx: Context<PlaceHuntingMark>) -> Result<()> {
         .saturating_mul(mark_cost_percent)
         .saturating_div(1000);
 
-    let min_mark_cost = spl_prog::native_token::LAMPORTS_PER_SOL / 100; // 0.01 SOL
+    let min_mark_cost = native_token::LAMPORTS_PER_SOL / 100; // 0.01 SOL
     let mark_cost = if mark_cost_raw < min_mark_cost {
         min_mark_cost
     } else {

@@ -1,7 +1,7 @@
 use crate::constants::ocean;
 use crate::instructions::UpdateOceanDaily;
 use anchor_lang::prelude::*;
-use anchor_lang::solana_program::keccak::{hash, hashv};
+use solana_program::keccak::{hash, hashv};
 use anchor_lang::solana_program::sysvar::slot_hashes::SlotHashes;
 use anchor_lang::solana_program::sysvar::Sysvar;
 

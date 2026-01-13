@@ -1,5 +1,5 @@
 use anchor_lang::prelude::*;
-use anchor_lang::solana_program::hash::{hash, Hash};
+use solana_program::hash::{hash, Hash};
 
 pub const SEED_OCEAN: &[u8] = b"ocean";
 pub const SEED_VAULT: &[u8] = b"vault";

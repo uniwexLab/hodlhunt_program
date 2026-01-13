@@ -45,7 +45,7 @@ pub enum ErrorCode {
     // Marks
     #[msg("Hunting mark limit exceeded (max 4 per ocean mode period)")]
     MarkLimitExceeded,
-    #[msg("Too early to place hunting mark (must be within 3 hours of hunger)")]
+    #[msg("Too early to place hunting mark (must be within 24 hours of hunger)")]
     MarkTooEarly,
     #[msg("Hunting mark is inactive")]
     MarkInactive,

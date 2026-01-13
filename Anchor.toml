@@ -1,16 +1,19 @@
 [toolchain]
-package_manager = "yarn"
 anchor_version = "0.32.1"
+package_manager = "yarn"
 
 [features]
-seeds = false
+resolution = true
 skip-lint = false
+
+[programs.devnet]
+hodlhunt = "BJsnZMfuDmhhs1AJXtBk36HhiT8eKLABP51QLEi3isYQ"
 
 [programs.localnet]
 cryptofish = "J53FRrByV9UVSsKbhCY8WBSzZciD1z92bVuVhTUKiHei"
 
-[programs.devnet]
-cryptofish = "BJsnZMfuDmhhs1AJXtBk36HhiT8eKLABP51QLEi3isYQ"
+[programs.mainnet]
+hodlhunt = "B1osUCap5eJ2iJnbRqfCQB87orhJM5EqZqPcGMbjJvXz"
 
 [registry]
 url = "https://api.apr.dev"
@@ -19,9 +22,16 @@ url = "https://api.apr.dev"
 cluster = "devnet"
 wallet = "~/.config/solana/id.json"
 
-[test]
-startup_wait = 10000
-validator = { url = "http://localhost:8890", faucet = "http://localhost:9901" }
-
 [scripts]
 test = "yarn run mocha -t 1000000 tests/**/*.js"
+
+[test]
+startup_wait = 10000
+shutdown_wait = 2000
+upgradeable = false
+
+[test.validator]
+bind_address = "0.0.0.0"
+url = "http://localhost:8890"
+ledger = ".anchor/test-ledger"
+rpc_port = 8899
