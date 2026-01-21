@@ -9,7 +9,7 @@ declare_id!("B1osUCap5eJ2iJnbRqfCQB87orhJM5EqZqPcGMbjJvXz");
 solana_security_txt::security_txt! {
     name: "HodlHunt",
     project_url: "https://hodlhunt.io/",
-    contacts: "email:hodlhunt_security@proton.me, telegram:https://t.me/c/3666534515/10",
+    contacts: "email:hodlhunt_security@proton.me",
     policy: "https://github.com/uniwexLab/hodlhunt_program/blob/main/SECURITY.md",
     preferred_languages: "en,ru",
     source_code: "https://github.com/uniwexLab/hodlhunt_program"
