@@ -3,6 +3,18 @@ use anchor_lang::prelude::*;
 
 declare_id!("B1osUCap5eJ2iJnbRqfCQB87orhJM5EqZqPcGMbjJvXz");
 
+// On-chain security.txt (shown in explorers that support the Neodyme format).
+// Keep mutable details (policy text, encryption keys, etc.) off-chain and link to them.
+#[cfg(not(feature = "no-entrypoint"))]
+solana_security_txt::security_txt! {
+    name: "HodlHunt",
+    project_url: "https://hodlhunt.io/",
+    contacts: "email:hodlhunt_security@proton.me, telegram:https://t.me/c/3666534515/10",
+    policy: "https://github.com/uniwexLab/hodlhunt_program/blob/main/SECURITY.md",
+    preferred_languages: "en,ru",
+    source_code: "https://github.com/uniwexLab/hodlhunt_program"
+}
+
 pub mod events;
 pub use events::*;
 pub mod errors;
