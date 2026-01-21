@@ -74,10 +74,3 @@ Cargo.lock
 programs/hodlhunt/Cargo.toml
 programs/hodlhunt/src/**   (all source files)
 ```
-
-## Notes
-
-- Keep the repository public and pinned to the exact commit used for verification.
-- Do not include private keys, target/ artifacts, or `.so` binaries in the repo.
-- Always use Docker-based builds for verification to ensure reproducibility.
-- The Docker container ensures consistent build environment regardless of local setup.

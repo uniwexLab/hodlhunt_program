@@ -7,7 +7,6 @@ This document describes how to report security vulnerabilities for HodlHunt.
 Please report security issues **privately** and **do not** open public GitHub issues for vulnerabilities.
 
 - **Email (preferred)**: `hodlhunt_security@proton.me`
-- **Telegram**: `https://t.me/c/3666534515/10`
 
 When reporting, please include:
 
